@@ -14,7 +14,8 @@ class GenderMigration extends Migration
     public function up()
     {
         Schema::create('Gender', function (Blueprint $table) {
-            $table->increments('id');
+            $table->string('id_User',12);
+            $table->string('descripcion_Gender', 100);
             $table->timestamps();
         });
     }

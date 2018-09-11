@@ -14,7 +14,8 @@ class UserMigration extends Migration
     public function up()
     {
         Schema::create('User', function (Blueprint $table) {
-            $table->increments('id');
+            $table->string('id');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
